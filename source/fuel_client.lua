@@ -241,7 +241,7 @@ Citizen.CreateThread(function()
 							DrawText3Ds(stringCoords.x, stringCoords.y, stringCoords.z + 1.2, Config.Strings.PurchaseJerryCan)
 
 							if IsControlJustReleased(0, 38) then
-								GiveWeaponToPed(ped, 883325847, 4500, false, true)
+								TriggerServerEvent('fuel:add', Config.JerryCanCost)
 
 								TriggerServerEvent('fuel:pay', Config.JerryCanCost)
 
