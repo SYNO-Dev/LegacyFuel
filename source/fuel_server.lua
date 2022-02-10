@@ -13,3 +13,18 @@ if Config.UseESX then
 		end
 	end)
 end
+
+RegisterServerEvent('fuel:add')
+AddEventHandler('fuel:add', function(price)
+	local xPlayer = ESX.GetPlayerFromId(source)
+	local xItem = xPlayer.getInventoryItem('WEAPON_PETROLCAN')
+
+	if price > 0 then
+		if xItem.count >= 1 then
+			TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'You already have Jerry can', style = { ['background-color'] = '#DF0101', ['color'] = '#000000' } })
+		else
+			xPlayer.addWeapon('WEAPON_PETROLCAN', 4500)
+		end
+	
+	end
+end)
