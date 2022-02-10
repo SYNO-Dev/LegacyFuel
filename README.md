@@ -1,3 +1,6 @@
+###USE
+COMPATIBLE WITH CHEZZA_INVENTORY
+
 ### About
 Started off as my first script, and for whatever reason, I decided to release it. As it was pretty badly created, I felt like I should rewrite it and make a better version, so ended up spending a few hours doing so.
 
